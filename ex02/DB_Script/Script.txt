@@ -1,0 +1,25 @@
+/* version check */
+SELECT VERSION();
+
+/* SEQUENCE create - mariadb 10.3 부터 지원 */
+create sequence seq_board
+start with 1
+increment by 1
+;
+
+/* create table -10.2 이므로 auto increment 사용*/
+CREATE TABLE tbl_board (
+	bno int AUTO_INCREMENT PRIMARY key,
+	title VARCHAR(200) NOT NULL,
+	content VARCHAR(2000) NOT NULL,
+	writer VARCHAR(50) NOT NULL,
+	regdate DATETIME DEFAULT current_timestamp,
+	updatedate DATETIME DEFAULT current_timestamp
+);
+
+/* INSERT SAMPLE DATA */
+INSERT INTO tbl_board(title, content, writer)
+VALUES ('test title', 'test content', 'testuser0');
+
+/* AUTOCOMMIT OFF */
+set autocommit = false;
