@@ -1,70 +1,34 @@
-# Created by https://www.toptal.com/developers/gitignore/api/eclipse
-# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse
+# ignore all .class files
+*.class
 
-### Eclipse ###
-.metadata
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-#.settings/
-.loadpath
-.recommenders
+# exclude lib.class from "*.class", meaning all lib.class are still tracked
+!lib.class
 
-# External tool builders
-.externalToolBuilders/
+# ignore all json files whose name begin with 'temp-'
+temp-*.json
 
-# Locally stored "Eclipse launch configurations"
-*.launch
+# only ignore the build.log file in current directory, not those in its subdirectories
+/build.log
 
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
+# specify a folder with slash in the end
+# ignore all files in any directory named temp
+temp/
 
-# CDT-specific (C/C++ Development Tooling)
-.cproject
+# ignore doc/notes.txt, but not doc/server/arch.txt
+bin/*.txt
 
-# CDT- autotools
-.autotools
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+# /** matches 0 or more directories
+doc/**/*.pdf
 
-# Java annotation processor (APT)
-.factorypath
+# Package Files #
+*.jar
+*.war
+*.ear
+*.db
 
-# PDT-specific (PHP Development Tools)
-.buildpath
+# Eclipse
+target/**/MANIFEST.MF
 
-# sbteclipse plugin
-.target
-
-# Tern plugin
-.tern-project
-
-# TeXlipse plugin
-.texlipse
-
-# STS (Spring Tool Suite)
-.springBeans
-
-# Code Recommenders
-.recommenders/
-
-# Annotation Processing
-.apt_generated/
-.apt_generated_test/
-
-# Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
-
-# Uncomment this line if you wish to ignore the project description file.
-# Typically, this file would be tracked if it contains build/dependency configurations:
-#.project
-
-### Eclipse Patch ###
-# Spring Boot Tooling
-.sts4-cache/
-
-# End of https://www.toptal.com/developers/gitignore/api/eclipse
+target/*.properties
+.settings
