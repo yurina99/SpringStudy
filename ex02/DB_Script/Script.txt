@@ -1,3 +1,14 @@
+/*MariaDB Script */
+
+/* create db */
+CREATE DATABASE 데이터베이스명;
+
+/* 사용자 계정 생성 'id'@'localhost' 이면 로컬에서만 접속 가능*/
+CREATE USER '아이디'@'%' IDENTIFIED BY '비밀번호';
+
+/* grant priviliges */
+grant all privileges on yurina.* to 'yurina'@'localhost';
+
 /* version check */
 SELECT VERSION();
 
