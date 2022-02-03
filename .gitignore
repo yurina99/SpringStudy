@@ -32,3 +32,4 @@ target/**/MANIFEST.MF
 
 target/*.properties
 .settings
+.project
