@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.zerock.domain.BoardVO;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -25,6 +26,41 @@ public class BoardServiceTests {
 		assertNotNull(service);
 		
 	}
+	
+	@Test
+	public void testRegister() {
+		BoardVO board = new BoardVO();
+		
+		board.setTitle("Reg Impl Test ");
+		board.setContent("Reg impl contents test");
+		board.setWriter("yurina");
+		
+		service.register(board);		
+		
+		log.info("reg result____:"+board.getBno());
+	}
+	
+	@Test
+	public void testGetList() {
+		service.getList().forEach(board -> log.info(board));
+	}
+	
+	@Test
+	public void testModify() {
+		
+		BoardVO board = service.get(1L);
+		if(board == null) { return; }
+		
+		board.setTitle("Reg Impl Update Test ");
+		
+		log.info("update test___:"+service.modify(board));
+	}
+	
+	@Test
+	public void testDelete() {
+		log.info("Delete test___:"+service.remove(1L));
+	}
+	
 	
 
 }
