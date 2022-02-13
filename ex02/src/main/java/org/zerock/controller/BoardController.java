@@ -29,7 +29,7 @@ public class BoardController {
 		
 		log.info("list___");
 		model.addAttribute("list", service.getList());
-		
+		log.info("List___end");
 	}
 	
 	@PostMapping("/register")
