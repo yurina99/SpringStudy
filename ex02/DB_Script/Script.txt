@@ -34,3 +34,7 @@ VALUES ('test title', 'test content', 'testuser0');
 
 /* AUTOCOMMIT OFF */
 set autocommit = false;
+
+/* big insert */
+INSERT INTO tbl_board(title, content, writer)
+SELECT title,content,writer FROM tbl_board;
