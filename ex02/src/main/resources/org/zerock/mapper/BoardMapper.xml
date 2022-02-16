@@ -16,7 +16,7 @@
 			SELECT bno, title, content, writer, regdate, updatedate
             FROM tbl_board 
             ORDER BY bno desc
-            LIMIT #{limitStart},#{limitSize}
+            LIMIT #{limitStart},#{amount}
 		]]>
 	</select>
 	
