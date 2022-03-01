@@ -33,3 +33,5 @@ target/**/MANIFEST.MF
 target/*.properties
 .settings
 .project
+/ex03/
+/ex02/
