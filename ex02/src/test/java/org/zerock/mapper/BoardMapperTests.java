@@ -111,7 +111,6 @@ public class BoardMapperTests {
 		cri.setKeyword("yurina_home");
 		cri.setType("TW");
 		
-		log.info(cri);
 		List<BoardVO> list = mapper.getListWithPaging(cri);
 		
 		list.forEach(board -> log.info(board));
