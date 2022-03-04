@@ -1,0 +1,13 @@
+
+/* create table -10.2 이므로 auto increment 사용*/
+CREATE TABLE tbl_reply (
+	rno INT PRIMARY key,
+	bno INT NOT NULL,
+	reply varchar(1000) NOT NULL,
+	replyer VARCHAR(50) NOT NULL,
+	replydate DATETIME DEFAULT CURRENT_TIMESTAMP,
+	updatedate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+SELECT * FROM tbl_reply;
